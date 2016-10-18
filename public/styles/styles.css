@@ -68,12 +68,25 @@ container
   ==========================================================
 */
 
+.app-title {
+    background-color: white;
+    color: black;
+    position: absolute;
+    top: 340px;
+    right: 45%;
+    height: 40px;
+    line-height: 40px;
+    width: 140px;
+    text-align: center;
+}
+
 header {
     background-color: black;
     color: white;
     height: 380px;
     background: url("/images/death_star_image.jpg");
     background-size: cover;
+    position: relative;
 }
 
 header>h1 {
@@ -160,22 +173,40 @@ header nav ul>li:first-child {
 .poster-item {
     margin: 5px;
     flex: 1 1 150px;
-    border: 2px solid black;
+    /*border: 2px solid black;*/
     position: relative;
+}
+
+.poster-item:hover .poster-item-overlay {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .poster-item-overlay {
     position: absolute;
     bottom: 0px;
+    left: 0;
+    width: 260px;
     background: rgba(0, 0, 0, 0.7);
-    ;
     padding: 20px;
     color: white;
+    transform: translateY(20px);
+    transition: all 0.8s ease-in-out;
+    opacity: 0;
+}
+
+.poster-item-overlay h3, .poster-item-overlay h6 {
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 13px;
+    letter-spacing: 0.3px;
+    margin: 0;
+}
+
+.poster-item-overlay h6 {
+    margin-top: 15px;
 }
 
 footer {
     background-color: pink;
-}
-
-
 }
