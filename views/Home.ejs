@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <% include partials/head.ejs %>
+
+</head>
+
+<body>
+
+    <!--container -->
+    <div class="container">
+
+        <!--header -->
+        <header>
+
+            <h1> <%= title %></h1>
+            <nav>
+                <ul>
+                    <li class="movies-menu"><a href="#">MOVIES <i class="fa fa-arrow-down"></i></a>
+                      <ul class="sub-movie-list">
+                        <% for ( var i = 0; i < movies.length; i++) {%>
+                          <li><a href="#"><%= movies[i].title %></a></li>
+                        <%}%>
+                      </ul>
+                    </li>
+                    <li class="home-menu"><a href="#">HOME</a></li>
+                </ul>
+            </nav>
+        </header>
+
+
+        <!--posters-container content -->
+        <div class="posters-container">
+
+            <% for (var i = 0; i < movies.length; i++) { %>
+                <div class="poster-item">
+                    <img src="/images/<%= movies[i].poster %>" width="300px" height="400px" />
+
+                    <!-- poster-item-overlay-->
+                    <div class="poster-item-overlay">
+                      <h4><%= movies[i].title%></h4>
+                      <h6>VIEW MORE <i class="fa fa-arrow-right"></i> </h6>
+                    </div>
+
+                </div>
+
+                <% } %>
+
+        </div>
+
+
+
+        <!--footer -->
+        <footer>footer</footer>
+
+
+        <% include partials/scripts.ejs %>
+    </div>
+    <!-- end of container -->
+</body>
+
+</html>
