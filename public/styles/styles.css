@@ -73,20 +73,45 @@ container
     color: black;
     position: absolute;
     top: 340px;
-    right: 45%;
+    right: 40%;
     height: 40px;
-    line-height: 40px;
-    width: 140px;
+    line-height: 20px;
+    width: 200px;
+    padding: 10px;
     text-align: center;
 }
 
-header {
+.header-home {
     background-color: black;
     color: white;
     height: 380px;
     background: url("/images/death_star_image.jpg");
     background-size: cover;
     position: relative;
+}
+
+.header-single-movie {
+    background-color: #555;
+    color: white;
+    height: 380px;
+    position: relative;
+}
+
+.header-single-movie img {
+    width: 100%;
+    height: 380px;
+}
+
+.movies-menu-single {
+    position: relative;
+    bottom: 350px;
+    right: 40px;
+}
+
+.home-menu-single {
+    position: relative;
+    bottom: 350px;
+    right: 20px
 }
 
 header>h1 {

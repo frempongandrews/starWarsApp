@@ -2,7 +2,7 @@ const PORT = require("../config").PORT;
 
 var moviesJSON = require('../movies.json');
 
-module.exports = function (app) {
+module.exports = function(app) {
 
     var movies = moviesJSON.movies;
 
@@ -13,18 +13,29 @@ module.exports = function (app) {
 
         });
     });
-    app.get('/episodes', function (req, res) {
+    app.get('/episodes', function(req, res) {
         res.send("All episodes page");
     });
 
-    app.get('/episodes/:episode_number', function (req, res) {
+    app.get('/star-wars-episode/:episode_number', function(req, res) {
         var episode_number = req.params.episode_number;
-        console.log(episode_number);
-        res.send("Episode number: " + episode_number + " page")
+        //console.log(episode_number);
+        if (episode_number > 0 && episode_number <= 6) {
+            var singleMovie = movies[episode_number - 1];
+            var singleMovieInfo = {
+                title: singleMovie.title,
+                movies: movies,
+                image: "/images/" + singleMovie.hero_image
+            }
+            res.render("movie-single", singleMovieInfo);
+        } else {
+            res.send("Not found");
+        }
+
     });
 
-//if placed above, it would take precedence
-    app.get('*', function (req, res) {
+    //if placed above, it would take precedence
+    app.get('*', function(req, res) {
         res.send("Page not found")
     });
 
