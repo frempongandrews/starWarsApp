@@ -238,7 +238,7 @@ header nav ul>li:first-child {
     background: rgba(0, 0, 0, 0.7);
     padding: 20px;
     color: white;
-    transform: translateY(40px);
+    transform: translateY(10px);
     transition: all 0.5s ease-in-out;
     opacity: 0;
 }
@@ -331,7 +331,25 @@ header nav ul>li:first-child {
 }
 
 footer {
-    background-color: pink;
+    background-color: black;
+    color: white;
+    margin-top: 40px;
+    line-height: 40px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+}
+
+.footer-icons i {
+    margin: 10px;
+    color: white;
+}
+
+.footer-icons i:first-child:hover {
+    color: red;
+    transition: color 0.7s ease;
 }
 
 
