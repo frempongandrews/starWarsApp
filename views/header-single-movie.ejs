@@ -14,11 +14,11 @@
             <li class="movies-menu-single"><a href="#">MOVIES <i class="fa fa-arrow-down down-arrow-single"></i></a>
               <ul class="sub-movie-list">
                 <% for ( var i = 0; i < movies.length; i++) {%>
-                  <li><a href="#"><%= movies[i].title %></a></li>
+                  <li><a href="/star-wars-episode/<%= movies[i].episode_number %>"> <%= movies[i].title %></a></li>
                 <%}%>
               </ul>
             </li>
-            <li class="home-menu-single"><a href="#">HOME</a></li>
+            <li class="home-menu-single"><a href="/">HOME</a></li>
         </ul>
     </nav>
 </header>

@@ -21,7 +21,8 @@
         <div class="posters-container">
 
             <% for (var i = 0; i < movies.length; i++) { %>
-                <div class="poster-item">
+              <a href="/star-wars-episode/<%= movies[i].episode_number %>">
+                 <div class="poster-item">
                     <img src="/images/<%= movies[i].poster %>" width="300px" height="400px" />
 
                     <!-- poster-item-overlay-->
@@ -30,7 +31,8 @@
                       <h6>VIEW MORE <i class="fa fa-arrow-right"></i> </h6>
                     </div>
 
-                </div>
+                 </div>
+                </a>
 
                 <% } %>
 

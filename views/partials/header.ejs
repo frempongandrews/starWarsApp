@@ -1,16 +1,16 @@
 <header class="header-home">
 
-    <h1 class="app-title"> <%= title %></h1>
+    <h1 class="app-title" style="background: url('/images/StarWarsLogo.svg.jpg'); background-repeat: no-repeat" > </h1>
     <nav>
         <ul>
             <li class="movies-menu"><a href="#">MOVIES <i class="fa fa-arrow-down"></i></a>
               <ul class="sub-movie-list">
                 <% for ( var i = 0; i < movies.length; i++) {%>
-                  <li><a href="#"><%= movies[i].title %></a></li>
+                  <li><a href="/star-wars-episode/<%= movies[i].episode_number%>"><%= movies[i].title %></a></li>
                 <%}%>
               </ul>
             </li>
-            <li class="home-menu"><a href="#">HOME</a></li>
+            <li class="home-menu"><a href="/">HOME</a></li>
         </ul>
     </nav>
 </header>

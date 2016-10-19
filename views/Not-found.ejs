@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <% include partials/head.ejs %>
+
+</head>
+
+<body>
+
+    <!--container -->
+    <div class="container">
+
+
+        <!--not-found-container -->
+        <div class="not-found-container" style="background: url(/images/404.jpg); background-repeat: no-repeat;
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+
+        ">
+
+        <div class="not-found-message">
+          <h2>Ops! You have reached the end of the universe!. Just kidding.
+            The page you requested is not available.
+        </h2>
+
+        <a href="/"><h1>Click here to go back to the homepage</h1></a>
+      </div>
+
+
+        </div>
+
+
+
+        <!--footer -->
+
+
+
+        <% include partials/scripts.ejs %>
+    </div>
+    <!-- end of container -->
+</body>
+
+</html>

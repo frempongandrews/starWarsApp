@@ -32,14 +32,18 @@ module.exports = function(app) {
             }
             res.render("movie-single", singleMovieInfo);
         } else {
-            res.send("Not found");
+            res.render("Not-found", {
+                title: "Start Wars App"
+            });
         }
 
     });
 
     //if placed above, it would take precedence
     app.get('*', function(req, res) {
-        res.send("Page not found")
+        res.render("Not-found", {
+            title: "Start Wars App"
+        });
     });
 
     app.listen(PORT, () => {
