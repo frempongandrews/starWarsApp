@@ -14,8 +14,28 @@
 
         <!--header -->
 
-        <% include header-single-movie.ejs%>
+        <% include header-single-movie.ejs %>
 
+        <!--content single-->
+
+      <div class="single-main-content-container">
+
+
+        <div class="poster-single">
+          <img src= <%=poster %> width="300px" height="400px" />
+        </div>
+
+
+        <div class="single-main-content">
+          <p>
+            <%= description%>
+          </p>
+
+        </div>
+
+
+
+      </div>
 
 
         <!--footer -->

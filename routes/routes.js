@@ -25,7 +25,9 @@ module.exports = function(app) {
             var singleMovieInfo = {
                 title: singleMovie.title,
                 movies: movies,
-                image: "/images/" + singleMovie.hero_image
+                image: "/images/" + singleMovie.hero_image,
+                poster: "/images/" + singleMovie.poster,
+                description: singleMovie.description
             }
             res.render("movie-single", singleMovieInfo);
         } else {

@@ -104,14 +104,15 @@ container
 
 .movies-menu-single {
     position: relative;
+    width: 80px;
     bottom: 350px;
-    right: 40px;
+    right: 60px;
 }
 
 .home-menu-single {
     position: relative;
     bottom: 350px;
-    right: 20px
+    right: 30px;
 }
 
 header>h1 {
@@ -138,6 +139,12 @@ header nav>ul {
     bottom: 5px;
 }
 
+.down-arrow-single {
+    position: absolute;
+    right: 7px;
+    bottom: 2px;
+}
+
 .home-menu {
     padding: 20px;
     top: 10px;
@@ -154,6 +161,11 @@ header nav ul>li:first-child {
 }
 
 .movies-menu:hover .sub-movie-list {
+    height: 320px;
+    opacity: 1;
+}
+
+.movies-menu-single:hover .sub-movie-list {
     height: 320px;
     opacity: 1;
 }
@@ -185,7 +197,7 @@ header nav ul>li:first-child {
 
 /*
   ==========================================================
-  main content
+  main content home
   ==========================================================
 */
 
@@ -230,6 +242,28 @@ header nav ul>li:first-child {
 
 .poster-item-overlay h6 {
     margin-top: 15px;
+}
+
+
+/*
+  ==========================================================
+  main content single
+  ==========================================================
+*/
+
+.single-main-content-container {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.poster-single {
+    flex: 0 1 300px;
+}
+
+.single-main-content {
+    flex: 1 1 250px;
+    /*background-color: green;*/
+    padding: 40px 15px;
 }
 
 footer {
