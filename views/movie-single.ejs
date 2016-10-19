@@ -21,21 +21,40 @@
       <div class="single-main-content-container">
 
 
+        <!-- poster single -->
         <div class="poster-single">
           <img src= <%=poster %> width="300px" height="400px" />
         </div>
 
 
+        <!-- single main content -->
         <div class="single-main-content">
+
+          <!-- description -->
+          <h2 class="single-movie-description">Description</h2>
           <p>
             <%= description%>
           </p>
 
-        </div>
+
+
+          <!-- main characters -->
+          <h2 class="single-movie-characters-title"> Main characters</h2>
+          <p>
+            <%for (var i = 0; i < singleMovie.main_characters.length; i++) {%>
+              <ul>
+                <li>
+                  <%= singleMovie.main_characters[i] %>
+                </li>
+              </ul>
+            <% } %>
+          </p>
+
+        </div> <!-- single main content -->
 
 
 
-      </div>
+      </div> <!-- end single main content container -->
 
 
         <!--footer -->

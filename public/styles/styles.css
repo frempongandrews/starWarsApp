@@ -258,12 +258,34 @@ header nav ul>li:first-child {
 
 .poster-single {
     flex: 0 1 300px;
+    margin: 20px;
 }
 
 .single-main-content {
     flex: 1 1 250px;
     /*background-color: green;*/
-    padding: 40px 15px;
+    padding: 5px 10px;
+}
+
+.single-movie-description {
+    margin-top: 30px;
+    border: 1px solid black;
+    width: 100px;
+    text-align: center;
+    padding: 10px;
+}
+
+.single-main-content p {
+    margin-top: 20px;
+    line-height: 25px;
+}
+
+.single-movie-characters-title {
+    margin-top: 20px;
+    border: 1px solid black;
+    width: 150px;
+    text-align: center;
+    padding: 10px;
 }
 
 footer {
